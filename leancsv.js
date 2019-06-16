@@ -21,6 +21,7 @@
 			} else {
 				_rows.splice(index, 0, fields);
 			}
+			_rowCount++;
 		};
 
 		this.getColumnCount = function() {
@@ -67,8 +68,7 @@
 
 		// Stringifies field argument and handles special characters
 		function stringifyField(field) {
-			// Convert number to string to be safe
-			field = '' + field;
+			field = '' + field; // Converts number to string to be safe
 			var asString = "";
 			var charCount = field.length;
 			var mustEscape = shouldEscape(field);
