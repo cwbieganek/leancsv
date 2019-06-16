@@ -93,10 +93,8 @@
 	try {
 		window;
 		document;
-		// Browser if we make it this far
-		window.leancsv = leancsv;
+		window.leancsv = leancsv; // Browser if we make it this far
 	} catch (e) {
-		// Node
-		module.exports = leancsv;
+		module.exports = leancsv; // Node
 	}
 }())
